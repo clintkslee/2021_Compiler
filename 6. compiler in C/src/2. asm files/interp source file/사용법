@@ -1,0 +1,7 @@
+//인터프리터 생성
+yacc -d int.y
+flex int.l
+cc -o interp y.tab.c lex.yy.c int.c lib.c
+
+//실행방법
+./interp a.asm
